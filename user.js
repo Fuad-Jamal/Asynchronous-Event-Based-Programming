@@ -1,7 +1,7 @@
 let user = new Promise((resolve, reject) => {
     const info = {
         name: 'web day',
-        street: 'nigga',
+        street: 'band',
         nation: ['unkwown','fate']
     }
     resolve(info)
