@@ -4,18 +4,23 @@
 // ) 
 // .then(info => console.log(info.weight))
 // .catch(error => console.error(error))
-
+find()
 async function find(){
     try{
-        let ans = await fetch("https://pokeapi.co/api/v2/pokemon/typhlosion")
+        const poked = document.getElementById("poked").value.toLowerCase();
+       const ans = await fetch(`https://pokeapi.co/api/v2/pokemon/${poked}`)
         if (!ans.ok){
             throw new Error ('impossible to find')
         }
         const found = await ans.json()
-        console.log(found)
+        let sprite = found.sprites.front_default;
+        let image = document.getElementById("sprite")
+        
+        image.src = sprite;
+        image.style.display = 'block'
     }
     catch(error){
         console.error(error)
     }
 }
-find()
+
