@@ -16,7 +16,7 @@ let rou = async (tim) => {
 let roun = async (sub) => {
     return new Promise ((resolve) => {
         setTimeout(() => {
-            resolve(sub -= 5)
+            resolve(sub -= 5 )
         },3000)
     })
 }
