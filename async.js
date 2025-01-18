@@ -12,7 +12,7 @@ const papa = Promise.all([tide,tidy,tidee])
 //     console.log(value)
 // })
 const all = async () => {
- const them = await Promise.race([tide,tidee,tidy])
+ const them = await Promise.allSettled([tide,tidee,tidy])
  console.log(them)
  them.forEach(them=>{
     console.log(them)

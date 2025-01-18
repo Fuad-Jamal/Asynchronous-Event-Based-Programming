@@ -4,7 +4,7 @@
 // ) 
 // .then(info => console.log(info.weight))
 // .catch(error => console.error(error))
-find()
+
 async function find(){
     try{
         const poked = document.getElementById("poked").value.toLowerCase();
@@ -23,4 +23,5 @@ async function find(){
         console.error(error)
     }
 }
+find()
 
