@@ -23,5 +23,5 @@ async function find(){
         console.error(error)
     }
 }
-find()
+
 
