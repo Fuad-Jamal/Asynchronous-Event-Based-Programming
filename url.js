@@ -1,7 +1,7 @@
 Promise.all([
-    fetch('https://jsonplaceholder.typicode.com/posts'),
+    fetch('https://jsonplaceholder.typicode.com/posts/id'),
     fetch('https://jsonplaceholder.typicode.com/comments?postId=id'),
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://jsonplaceholder.typicode.com/users/id')
 ])
 .then((ye)=>{
     if(!ye.ok){
@@ -9,8 +9,10 @@ Promise.all([
     }else{
         return ye.json()
     }
-}).then((data)=>{
-    console.log('there is something', data[0].type)
+    
+})
+.then((info)=>{
+    console.log('there is something', info[0].type)
 })
 .catch(err => console.log(err))
 // .then((ans)=>{
