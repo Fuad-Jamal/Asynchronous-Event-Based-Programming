@@ -19,3 +19,10 @@ function pizzaReady(){
 }
 orderPizza(pizzaReady)
 console.log('move on')
+
+const url = (" http://img.omdbapi.com/?apikey=[https://rapidapi.com/collection/pizza-apis]&")
+let data = async () => {
+    const response = await fetch(url)
+    console.log(response)
+} 
+data()
